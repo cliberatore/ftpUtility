@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FtpUtility</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "FTP Utility", '#', class: "brand" %>
+          <nav>
+            <ul class="nav pull-left">
+              <li><%= link_to "Client List", '#' %></li>
+              <li><%= link_to "Site List",   '#' %></li>
+            </ul>
+          </nav>
+          <%= render "nav_search" %>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
 </body>
 </html>
