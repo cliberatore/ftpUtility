@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  scanName: MyString
+  destName: MyString
+  destDirectory: MyString
+  site: 
+
+two:
+  scanName: MyString
+  destName: MyString
+  destDirectory: MyString
+  site: 

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Scanname:</b>
+  <%= @connection.scanName %>
+</p>
+
+<p>
+  <b>Destname:</b>
+  <%= @connection.destName %>
+</p>
+
+<p>
+  <b>Destdirectory:</b>
+  <%= @connection.destDirectory %>
+</p>
+
+<p>
+  <b>Site:</b>
+  <%= @connection.site %>
+</p>
+
+
+<%= link_to 'Edit', edit_connection_path(@connection) %> |
+<%= link_to 'Back', connections_path %>

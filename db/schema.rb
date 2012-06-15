@@ -11,14 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120614041659) do
+ActiveRecord::Schema.define(:version => 20120615022717) do
 
-  create_table "clients", :force => true do |t|
-    t.string   "name"
-    t.string   "groupid"
-    t.text     "notes"
+  create_table "connections", :force => true do |t|
+    t.string   "scanName"
+    t.string   "destName"
+    t.string   "destDirectory"
+    t.integer  "sites"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "sites", :force => true do |t|
+    t.string   "protocol"
+    t.string   "hostname"
+    t.string   "username"
+    t.string   "password"
+    t.integer  "timestamp"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "directory"
   end
 
 end

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Protocol:</b>
+  <%= @site.protocol %>
+</p>
+
+<p>
+  <b>Hostname:</b>
+  <%= @site.hostname %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @site.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @site.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>
