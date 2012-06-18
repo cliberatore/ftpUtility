@@ -11,26 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120615022717) do
+ActiveRecord::Schema.define(:version => 20120617010840) do
 
   create_table "connections", :force => true do |t|
-    t.string   "scanName"
-    t.string   "destName"
-    t.string   "destDirectory"
-    t.integer  "sites"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "remoteSite"
+    t.string   "localName"
+    t.string   "remoteName"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sites", :force => true do |t|
-    t.string   "protocol"
-    t.string   "hostname"
+    t.string   "host"
+    t.string   "protocol",   :default => "ftp"
+    t.integer  "port",       :default => 22
     t.string   "username"
     t.string   "password"
-    t.integer  "timestamp"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.string   "directory"
+    t.string   "null"
+    t.boolean  "passive",    :default => true
+    t.boolean  "useipv4",    :default => false
+    t.integer  "timeout",    :default => 0
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
 end

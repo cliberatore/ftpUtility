@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Host:</b>
+  <%= @site.host %>
+</p>
+
+<p>
   <b>Protocol:</b>
   <%= @site.protocol %>
 </p>
 
 <p>
-  <b>Hostname:</b>
-  <%= @site.hostname %>
+  <b>Port:</b>
+  <%= @site.port %>
 </p>
 
 <p>
@@ -18,6 +23,26 @@
 <p>
   <b>Password:</b>
   <%= @site.password %>
+</p>
+
+<p>
+  <b>Directory:</b>
+  <%= @site.directory %>
+</p>
+
+<p>
+  <b>Passive:</b>
+  <%= @site.passive %>
+</p>
+
+<p>
+  <b>Useipv4:</b>
+  <%= @site.useipv4 %>
+</p>
+
+<p>
+  <b>Timeout:</b>
+  <%= @site.timeout %>
 </p>
 
 

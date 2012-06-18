@@ -18,7 +18,7 @@ class ConnectionsControllerTest < ActionController::TestCase
 
   test "should create connection" do
     assert_difference('Connection.count') do
-      post :create, connection: { destDirectory: @connection.destDirectory, destName: @connection.destName, scanName: @connection.scanName, site: @connection.site }
+      post :create, connection: { localName: @connection.localName, remoteName: @connection.remoteName, remoteSite: @connection.remoteSite }
     end
 
     assert_redirected_to connection_path(assigns(:connection))
@@ -35,7 +35,7 @@ class ConnectionsControllerTest < ActionController::TestCase
   end
 
   test "should update connection" do
-    put :update, id: @connection, connection: { destDirectory: @connection.destDirectory, destName: @connection.destName, scanName: @connection.scanName, site: @connection.site }
+    put :update, id: @connection, connection: { localName: @connection.localName, remoteName: @connection.remoteName, remoteSite: @connection.remoteSite }
     assert_redirected_to connection_path(assigns(:connection))
   end
 

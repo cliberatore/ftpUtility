@@ -1,4 +1,5 @@
 class Site < ActiveRecord::Base
-  has_many :connection
-  attr_accessible :hostname, :password, :protocol, :username
+  attr_accessible :directory, :host, :passive, :password, :port, :protocol, :timeout, :useipv4, :username
+  
+  has_many :connections
 end

@@ -2,10 +2,9 @@
 
 <table class="table table-condensed table-striped">
   <tr>
-    <th>Scanname</th>
-    <th>Destname</th>
-    <th>Destdirectory</th>
-    <th>Site</th>
+    <th>Remotesite</th>
+    <th>Localname</th>
+    <th>Remotename</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +12,9 @@
 
 <% @connections.each do |connection| %>
   <tr>
-    <td><%= connection.scanName %></td>
-    <td><%= connection.destName %></td>
-    <td><%= connection.destDirectory %></td>
-    <td><%= connection.site %></td>
+    <td><%= connection.remoteSite %></td>
+    <td><%= connection.localName %></td>
+    <td><%= connection.remoteName %></td>
     <td><%= link_to 'Show', connection %></td>
     <td><%= link_to 'Edit', edit_connection_path(connection) %></td>
     <td><%= link_to 'Destroy', connection, confirm: 'Are you sure?', method: :delete %></td>

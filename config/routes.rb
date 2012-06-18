@@ -1,11 +1,11 @@
 FtpUtility::Application.routes.draw do
   
-  get "batch/index"
-  
   resources :connections
 
   resources :sites
 
+  get "batch/index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

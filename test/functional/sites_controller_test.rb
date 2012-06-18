@@ -18,7 +18,7 @@ class SitesControllerTest < ActionController::TestCase
 
   test "should create site" do
     assert_difference('Site.count') do
-      post :create, site: { hostname: @site.hostname, password: @site.password, protocol: @site.protocol, username: @site.username }
+      post :create, site: { directory: @site.directory, host: @site.host, passive: @site.passive, password: @site.password, port: @site.port, protocol: @site.protocol, timeout: @site.timeout, useipv4: @site.useipv4, username: @site.username }
     end
 
     assert_redirected_to site_path(assigns(:site))
@@ -35,7 +35,7 @@ class SitesControllerTest < ActionController::TestCase
   end
 
   test "should update site" do
-    put :update, id: @site, site: { hostname: @site.hostname, password: @site.password, protocol: @site.protocol, username: @site.username }
+    put :update, id: @site, site: { directory: @site.directory, host: @site.host, passive: @site.passive, password: @site.password, port: @site.port, protocol: @site.protocol, timeout: @site.timeout, useipv4: @site.useipv4, username: @site.username }
     assert_redirected_to site_path(assigns(:site))
   end
 

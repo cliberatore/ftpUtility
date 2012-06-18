@@ -1,4 +1,5 @@
 class Connection < ActiveRecord::Base
+  attr_accessible :localName, :remoteName, :remoteSite
+  
   belongs_to :site
-  attr_accessible :destDirectory, :destName, :scanName, :site
 end

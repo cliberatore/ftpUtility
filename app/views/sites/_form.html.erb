@@ -12,12 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </div>
+  <div class="field">
     <%= f.label :protocol %><br />
     <%= f.text_field :protocol %>
   </div>
   <div class="field">
-    <%= f.label :hostname %><br />
-    <%= f.text_field :hostname %>
+    <%= f.label :port %><br />
+    <%= f.number_field :port %>
   </div>
   <div class="field">
     <%= f.label :username %><br />
@@ -26,6 +30,22 @@
   <div class="field">
     <%= f.label :password %><br />
     <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :directory %><br />
+    <%= f.text_field :directory %>
+  </div>
+  <div class="field">
+    <%= f.label :passive %><br />
+    <%= f.check_box :passive %>
+  </div>
+  <div class="field">
+    <%= f.label :useipv4 %><br />
+    <%= f.check_box :useipv4 %>
+  </div>
+  <div class="field">
+    <%= f.label :timeout %><br />
+    <%= f.number_field :timeout %>
   </div>
   <div class="actions">
     <%= f.submit %>

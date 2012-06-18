@@ -1,13 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  host: MyString
   protocol: MyString
-  hostname: MyString
+  port: 1
   username: MyString
   password: MyString
+  directory: MyString
+  passive: false
+  useipv4: false
+  timeout: 1
 
 two:
+  host: MyString
   protocol: MyString
-  hostname: MyString
+  port: 1
   username: MyString
   password: MyString
+  directory: MyString
+  passive: false
+  useipv4: false
+  timeout: 1

@@ -1,0 +1,56 @@
+Sites
+- Access
+  - CRUD
+- Definition
+  - String:  Host
+  - String:  Protocol
+  - Integer: Port
+  - String:  Username
+  - String:  Password
+  - String:  Directory
+  - boolean: passive default true
+  - boolean: useipv4 default true
+  - Integer: timeout default 0
+- Actions
+  - index
+    - list all sites
+  - new
+    - create new site form
+  - view
+    - Show definition
+    - Show connections
+    - new connection
+  - history
+    - show connection_instances which use this site
+
+Connections (Processes?)
+- Access
+  - CRUD
+- Definition
+  - Site:   remoteSite
+  - String: localName
+  - String: remoteName
+- Actions
+  - view
+    - view connection info
+      - parent Site
+      - all connection instances
+  - new (requires site)
+    - new connection form
+  - manually trigger
+    - upload file form
+    - process
+
+Connection_instance (Created by running a connection)
+- Access
+  - R
+- Definition
+  - Connection: connection
+  - Text:       log
+  - DateTime:   timeStamp
+- Actions
+  - index
+    - view archive
+      - by date
+      - by site
+  - view log

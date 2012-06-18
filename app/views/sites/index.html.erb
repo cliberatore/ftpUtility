@@ -1,11 +1,16 @@
 <h1>Listing sites</h1>
 
-<table>
+<table class="table table-condensed table-striped">
   <tr>
+    <th>Host</th>
     <th>Protocol</th>
-    <th>Hostname</th>
+    <th>Port</th>
     <th>Username</th>
     <th>Password</th>
+    <th>Directory</th>
+    <th>Passive</th>
+    <th>Useipv4</th>
+    <th>Timeout</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +18,15 @@
 
 <% @sites.each do |site| %>
   <tr>
+    <td><%= site.host %></td>
     <td><%= site.protocol %></td>
-    <td><%= site.hostname %></td>
+    <td><%= site.port %></td>
     <td><%= site.username %></td>
     <td><%= site.password %></td>
+    <td><%= site.directory %></td>
+    <td><%= site.passive %></td>
+    <td><%= site.useipv4 %></td>
+    <td><%= site.timeout %></td>
     <td><%= link_to 'Show', site %></td>
     <td><%= link_to 'Edit', edit_site_path(site) %></td>
     <td><%= link_to 'Destroy', site, confirm: 'Are you sure?', method: :delete %></td>
